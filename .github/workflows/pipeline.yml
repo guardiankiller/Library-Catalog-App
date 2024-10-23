@@ -19,6 +19,9 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm ci
+    - name: Update the config
+      run: echo "export const settings = {host:\"http://localhost:3030"\}" > src/config.js
+      #Tova e porta na backend-a purvo na local host da minat testovete i sled tova ako sa uspeshni na deploy
     - name: Start Backend
       run: npm run start:be &
     - name: Start Frontend
