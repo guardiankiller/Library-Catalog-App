@@ -43,7 +43,7 @@ jobs:
         wait_deploy: true 
   
   deploy-fe:
-    needs: build_test
+    needs: deploy-be
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
